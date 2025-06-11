@@ -10,7 +10,7 @@ metadata:
       }
 spec:
   rules:
-  - host: sample-service.example.com
+  - host: argoheader.xfm.sws.siemens.com
     http:
       paths:
       - path: /
