@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/vmaganti7/argo-header-based.git
     targetRevision: HEAD
-    path: main
+    path: argo-header-based
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
