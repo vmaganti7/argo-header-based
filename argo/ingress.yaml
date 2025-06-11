@@ -16,10 +16,8 @@ metadata:
       deregistration_delay.timeout_seconds=120
     alb.ingress.kubernetes.io/target-type: ip
     kubernetes.io/ingress.class: alb
-    nginx.ingress.kubernetes.io/configuration-snippet: |
-      if ($http_x_version = "v2") {
-        set $version "v2";
-      }
+    alb.ingress.kubernetes.io/conditions.service-v2: |
+      [{"field":"http-header","httpHeaderConfig":{"httpHeaderName": "X-Version", "values":["v2"]}}]
 spec:
   rules:
   - host: argoheader.xfm.sws.siemens.com
