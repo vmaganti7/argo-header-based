@@ -9,10 +9,10 @@ spec:
   source:
     repoURL: https://github.com/vmaganti7/argo-header-based.git
     targetRevision: HEAD
-    path: sample-service
+    path: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: sample-service
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
